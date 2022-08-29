@@ -1,0 +1,192 @@
+@import './_variable.scss';
+
+* {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #e3e3e3;
+    font-family: $font1;
+    // font-family: $font3;
+}
+
+.products-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: calc(5vh + 53px);
+    width: 100%;
+    .head-products{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+        .filter{
+            margin-left: 5%;
+            span{
+                cursor: pointer;
+                margin: 0 10px;
+            }
+        }
+        .search{
+            margin-right: 5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 20px;
+            input{
+                background-color: transparent;
+                border: none;
+                font-size: 1.2em;
+                &:focus{
+                    border: none;
+                    outline: none;
+                } 
+                &:active{
+                    border: none;
+                    outline: none;
+                }
+            }
+            svg{
+                font-size: 1.1em;
+                margin:0 10px;
+            }
+        }
+    }
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.card-product{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 300px;
+    width: 100%;
+    transition: 0.5s;
+    margin: 10px;
+    &:hover{
+        transform: scale(1.05);
+        .add-cart{
+            display: flex;
+            transition: 1s;
+            &:hover{
+                opacity: 1;
+                button{
+                    cursor: pointer;
+                    transition-delay: 1s;
+                    transition: 1s;
+                    margin: 10px 0;
+                    
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                a{
+                    text-decoration: none;
+                    color: white;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .product-image{
+        position: relative;
+        transition: 0.5s;
+        max-height: 395px;
+        max-width: 300px;
+        > img{
+            width: 300px;
+            height: 395px; 
+            object-fit: cover;
+            border-radius: 2px 2px 0 0 ;
+        }
+    }
+    .add-cart{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 99%;
+        background-color: rgba(0, 0, 0, 0.712);
+        backdrop-filter: blur(5px);
+        justify-content: center;
+        align-items: center;
+        color: white;
+        transition: 0.5s;
+
+        button {
+            margin: 150px 0;
+            transition-delay: 1s;
+            color: white;
+            border: 0px;
+            background-color: transparent;
+            font-size: 1em;
+            transition: 1s ease-in-out;
+        }
+
+    }
+    .product-info{
+        p{
+            &:nth-child(1){
+                color: #8b8b8b;
+                margin: 2px 0;
+            }
+            &:nth-child(2){
+                font-size: 1.2em;
+                color: #5f5f5f;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none;
+    margin: 0.1px;
+    transition: 0.5s;
+}
+
+@media (max-width: 741px) {
+    .head-products{
+        flex-direction: column-reverse;
+        .search {
+            margin-left: 5%;
+            width: 100px;
+            border: 1px solid transparent;
+            input{
+                width: 100%;
+            }
+            
+        }
+
+    }
+}
+
+@media (max-width: 450px) {
+    .search{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+    }
+    .filter{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,180 @@
+.go-home{
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
+    svg{
+        font-size: 2em;
+        color: white;
+        background-color: #6900fc;
+        padding: 10px;
+        border-radius: 50%;
+    }
+}
+.product-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    height: 100vh;
+    .images{
+        margin:0 50px;
+        display: flex;
+        .side-images{
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px;
+            .side-image{
+                width: 70px;
+                height: 70px;
+                object-fit: cover;
+                margin: 5px 0;
+                &:nth-child(1){
+                    margin-top: 0;
+                }
+            }
+            .active {
+                outline: 2px solid #6900fc;
+            }
+        }
+        > img{
+            max-width: 300px;
+            width: 100%;
+            height: fit-content;
+        }
+    }
+    .product-info{
+        max-width: 400px;
+        h2{
+            font-size: 2.3em;
+        }
+        p{
+            max-width: 400px;
+            &:nth-child(3){
+                margin: 5px 0;
+                font-weight: 1000;
+                color: rgb(24, 24, 24);
+            }
+        }
+        .counter{
+            button{
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+                padding: 5px 10px;
+                font-size: 1.5em;
+            }
+        }
+        .purchase{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            border-radius: 7px;
+            border: none;
+            background-color: #6900fc;
+            color: white;
+            font-size: 1.2em;
+            svg{
+                margin-right: 10px;
+            }
+        }
+    }
+    .sizes{
+        display: flex;
+        width: 100%;
+        max-width: 230px;
+        flex-wrap: wrap;
+        div{
+            cursor: pointer;
+            text-transform: uppercase;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.9em;
+            outline: 1px solid rgb(141, 139, 139);
+            background-color: rgb(225, 225, 225);
+            box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.188);
+            height: 15px;
+            width: 15px;
+            margin: 3px;
+            padding: 10px;
+        }
+    }
+}
+
+@media (max-width: 854px) {
+    .product-page{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+    .images{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+        .side-images{
+            display: flex;
+            flex-direction: column;
+            margin-right: 10px;
+            .side-image{
+                width: 100px !important;
+                height: 100px !important;
+                object-fit: cover;
+                margin: 5px 0;
+                &:nth-child(1){
+                    margin-top: 0;
+                }
+            }
+            .active {
+                outline: 2px solid #6900fc;
+            }
+        }
+        > img{
+            max-width: 440px !important;
+            width: 100%;
+            height: fit-content;
+        }
+    }
+    .product-info{
+        margin-top: 20px;
+        width: 100%;
+        max-width: calc(70%) !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        h2{
+            text-align: center;
+            font-size: 1.3em !important;
+        }
+        .purchase{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 571px) {
+    .go-home{
+        margin-bottom: 70px;
+    }
+    .images{
+        flex-direction: column-reverse;
+        .side-images{
+            flex-direction: row !important;
+            margin-right: 0;
+            .side-image{
+                width: 70px;
+                height: 70px;
+                object-fit: cover;
+                margin: 10px 5px !important;
+            }
+        }
+    }
+}
