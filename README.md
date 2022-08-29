@@ -2,6 +2,10 @@
 
 O desafio consiste passar por alguns testes lógicos com finalização de um projeto fullstack, renderizando um front com um carrinho que consome uma API feito pelo próprio desafio.
 
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/95971013/187109169-5ff1b295-6376-4183-bc15-05df4a14007c.gif" />
+</div>
+
 ## 🚀 Começando
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
@@ -64,6 +68,7 @@ $ npm run dev
 ## 📚 Funcionalidades
 
 ### FrontEnd
+- [x] Responsividade
 - [x] Criação carrinho
 - [x] Consumo de API
 - [x] Context API
@@ -72,7 +77,6 @@ $ npm run dev
 
 ### BackEnd
 - [x] Criação de CRUD
-
   
 ## 🛠️ Construído com
 
