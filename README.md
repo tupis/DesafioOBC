@@ -67,6 +67,8 @@ $ npm run dev
 - [x] Criação carrinho
 - [x] Consumo de API
 - [x] Context API
+- [x] Filtro por categoria
+- [x] Filtro por pesquisa digitada
 
 ### BackEnd
 - [x] Criação de CRUD
